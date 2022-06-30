@@ -5,32 +5,20 @@ jobs:
         name: Date Job1
         runs-on: ubuntu-latest
         steps:
-            - name: step date
-              uses: actions/checkout@v2
-            - name: step date two
-              run:  echo "Today is " . date("Y/m/d") . "<br>"
+            - run:  echo "date"
     job2:
         name: Date Job2
         runs-on: windows-latest
         steps:
-            - name: step date
-              uses: actions/checkout@v2
-            - name: step date two
-              run:  echo "Today is " . date("Y/m/d") . "<br>"
+            - run:  echo "date"
     job3:
         name: Date Job3
         runs-on: macos-latest
         steps:
-            - name: step date
-              uses: actions/checkout@v2
-            - name: step date two
-              run:  echo "Today is " . date("Y/m/d") . "<br>"
+            - run:  echo "date"
     job4:
         needs: [job1, job2, job3]
         name: Date Job4
         runs-on: windows-latest
         steps:
-            - name: step date
-              uses: actions/checkout@v2
-            - name: step date two
-              run:  echo "Today is " . date("Y/m/d") . "<br>"
+            - run:  echo "date"
